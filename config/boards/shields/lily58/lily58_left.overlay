@@ -20,12 +20,19 @@
 &left_encoder {
     status = "okay";
 };
-/ {
+
+ / {
     chosen {
-      zmk,battery = &vbatt;
+        zmk,battery = &vbatt;
     };
 
     vbatt: vbatt {
         compatible = "zmk,battery-nrf-vddh";
     };
+};
+
+/* --- ZMK Studio RPC over USB --- */
+&uart0 {
+    compatible = "zmk,studio-rpc-usb-uart";
+    status = "okay";
 };
