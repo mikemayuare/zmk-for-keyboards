@@ -55,7 +55,10 @@
                                                 &trans             &trans      &trans     &trans    &trans  &trans      &trans        &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = 
+              <&inc_dec_kp WH_U WH_D>,   /* Encoder 0 → scroll up/down */
+              <&inc_dec_kp WH_L WH_R>;   /* Encoder 1 → scroll left/right */
+            /* <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>; */
         };
 
         adjust_layer {
