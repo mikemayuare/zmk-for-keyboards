@@ -5,8 +5,10 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/rgb.h>
 
 / {
     // Activate ADJUST layer by pressing raise and lower
@@ -88,11 +90,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC         &kp N1           &kp N2           &kp N3       &kp N4            &kp N5                                 &kp N6           &kp N7             &kp N8           &kp N9            &kp N0            &kp GRAVE
-&kp TAB         &kp Q            &kp W            &kp E        &kp R             &kp T                                  &kp Y            &kp U              &kp I            &kp O             &kp P             &kp MINUS
-&kp LEFT_SHIFT  &HTL LEFT_GUI A  &HTL LEFT_ALT S  &mt LCTRL D  &mt F LEFT_SHIFT  &kp G                                  &kp H            &mt RIGHT_SHIFT J  &HTR RCTRL H     &HTR RIGHT_ALT L  &HTR RIGHT_GUI B  &kp SQT
-&kp LCTRL       &kp Z            &kp X            &kp C        &kp V             &kp B      &mkp LCLK      &mkp RCLK    &kp N            &kp M              &kp COMMA        &kp DOT           &kp FSLH          &kp RSHFT
-                                                  &kp LALT     &kp LGUI          &lt 1 TAB  &lt 2 SPACE    &lt 3 ENTER  &lt 4 BACKSPACE  &lt 0 DEL          &kp PRINTSCREEN
+&kp ESC         &kp N1           &kp N2           &kp N3        &kp N4            &kp N5                                 &kp N6           &kp N7             &kp N8           &kp N9            &kp N0            &kp GRAVE
+&kp TAB         &kp Q            &kp W            &kp E         &kp R             &kp T                                  &kp Y            &kp U              &kp I            &kp O             &kp P             &kp MINUS
+&kp LEFT_SHIFT  &HTL LEFT_GUI A  &HTL LEFT_ALT S  &mt LCTRL D   &mt F LEFT_SHIFT  &kp G                                  &kp H            &mt RIGHT_SHIFT J  &HTR RCTRL H     &HTR RIGHT_ALT L  &HTR RIGHT_GUI B  &kp SQT
+&kp LCTRL       &kp Z            &kp X            &kp C         &kp V             &kp B      &mkp LCLK      &mkp RCLK    &kp N            &kp M              &kp COMMA        &kp DOT           &kp FSLH          &kp RSHFT
+                                                  &lt 6 ESCAPE  &kp LGUI          &lt 1 TAB  &lt 2 SPACE    &lt 3 ENTER  &lt 4 BACKSPACE  &lt 5 DEL          &kp PRINTSCREEN
             >;
 
             sensor-bindings = <&mouse_mov_v>, <&mouse_mov_h>;
@@ -146,6 +148,32 @@
             >;
 
             label = "Numeric";
+        };
+
+        FUNCS {
+            bindings = <
+&trans  &trans   &trans  &trans  &trans  &trans                    &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &kp F12  &kp F7  &kp F8  &kp F9  &trans                    &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &kp F11  &kp F4  &kp F5  &kp F6  &trans                    &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
+&trans  &kp F10  &kp F1  &kp F2  &kp F3  &trans  &trans    &trans  &trans  &trans     &trans     &trans    &trans    &trans
+                         &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans
+            >;
+
+            label = "Functions keys";
+        };
+
+        MEDIA {
+            bindings = <
+&trans  &trans    &trans    &trans     &trans     &trans                        &trans           &trans           &trans           &trans           &trans        &trans
+&trans  &trans    &trans    &trans     &trans     &trans                        &rgb_ug RGB_EFF  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI  &trans        &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans                        &rgb_ug RGB_TOG  &trans           &trans           &trans           &trans        &trans
+&trans  &trans    &trans    &trans     &trans     &trans  &trans    &kp K_MUTE  &bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_CLR_ALL
+                            &trans     &trans     &trans  &trans    &kp C_STOP  &kp K_PREV       &kp K_NEXT       &trans
+            >;
+
+            sensor-bindings =
+                <&sensor_transp 0 0>,
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
     };
 };
