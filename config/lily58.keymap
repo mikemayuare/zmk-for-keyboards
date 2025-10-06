@@ -90,10 +90,10 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC         &kp N1           &kp N2          &kp N3        &kp N4             &kp N5                                 &kp N6           &kp N7              &kp N8           &kp N9            &kp N0               &kp GRAVE
-&kp TAB         &kp Q            &kp W           &kp E         &kp R              &kp T                                  &kp Y            &kp U               &kp I            &kp O             &kp P                &kp MINUS
-&kp LEFT_SHIFT  &HTL LEFT_GUI A  &mt LEFT_ALT S  &HTL LCTRL D  &HTL LEFT_SHIFT F  &kp G                                  &kp H            &HTR RIGHT_SHIFT J  &HTR RCTRL K     &HTR RIGHT_ALT L  &HTR RIGHT_GUI SEMI  &kp SQT
-&kp LCTRL       &kp Z            &kp X           &kp C         &kp V              &kp B      &mkp LCLK      &mkp RCLK    &kp N            &kp M               &kp COMMA        &kp DOT           &kp FSLH             &kp RSHFT
+&kp ESC         &kp N1           &kp N2          &kp N3        &kp N4             &kp N5                                 &kp N6           &kp N7              &kp N8           &kp N9            &kp N0              &kp GRAVE
+&kp TAB         &kp Q            &kp W           &kp E         &kp R              &kp T                                  &kp Y            &kp U               &kp I            &kp O             &kp P               &kp MINUS
+&kp LEFT_SHIFT  &HTL LEFT_GUI A  &mt LEFT_ALT S  &HTL LCTRL D  &HTL LEFT_SHIFT F  &kp G                                  &kp H            &HTR RIGHT_SHIFT J  &HTR RCTRL K     &HTR RIGHT_ALT L  &mt RIGHT_GUI SEMI  &kp SQT
+&kp LCTRL       &kp Z            &kp X           &kp C         &kp V              &kp B      &mkp LCLK      &mkp RCLK    &kp N            &kp M               &kp COMMA        &kp DOT           &kp FSLH            &kp RSHFT
                                                  &lt 6 ESCAPE  &kp LGUI           &lt 1 TAB  &lt 2 SPACE    &lt 3 ENTER  &lt 4 BACKSPACE  &lt 5 DEL           &kp PRINTSCREEN
             >;
 
