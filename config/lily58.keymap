@@ -92,49 +92,45 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp ESC         &kp N1           &kp N2           &kp N3        &kp N4             &kp N5                                 &kp N6           &kp N7              &kp N8           &kp N9            &kp N0               &kp GRAVE
-&kp TAB         &kp Q            &kp W            &kp E         &kp R              &kp T                                  &kp Y            &kp U               &kp I            &kp O             &kp P                &kp MINUS
-&kp LEFT_SHIFT  &HTL LEFT_GUI A  &HTL LEFT_ALT S  &HTL LCTRL D  &HTL LEFT_SHIFT F  &kp G                                  &kp H            &HTR RIGHT_SHIFT J  &HTR RCTRL K     &HTR RIGHT_ALT L  &HTR RIGHT_GUI SEMI  &kp SQT
-&kp LCTRL       &kp Z            &kp X            &kp C         &kp V              &kp B      &mkp LCLK      &mkp RCLK    &kp N            &kp M               &kp COMMA        &kp DOT           &kp FSLH             &kp RSHFT
-                                                  &lt 6 ESCAPE  &kp LGUI           &lt 1 TAB  &lt 2 SPACE    &lt 3 ENTER  &lt 4 BACKSPACE  &lt 5 DEL           &kp PRINTSCREEN
+&kp ESC         &kp N1           &kp N2           &kp N3        &kp N4             &kp N5                                            &kp N6           &kp N7              &kp N8           &kp N9            &kp N0               &kp GRAVE
+&kp TAB         &kp Q            &kp W            &kp E         &kp R              &kp T                                             &kp Y            &kp U               &kp I            &kp O             &kp P                &kp MINUS
+&kp LEFT_SHIFT  &HTL LEFT_GUI A  &HTL LEFT_ALT S  &HTL LCTRL D  &HTL LEFT_SHIFT F  &kp G                                             &kp H            &HTR RIGHT_SHIFT J  &HTR RCTRL K     &HTR RIGHT_ALT L  &HTR RIGHT_GUI SEMI  &kp SQT
+&kp LCTRL       &kp Z            &kp X            &kp C         &kp V              &kp B      &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp N            &kp M               &kp COMMA        &kp DOT           &kp FSLH             &kp RSHFT
+                                                  &lt 6 ESCAPE  &kp LGUI           &lt 1 TAB  &lt 2 SPACE         &lt 3 ENTER        &lt 4 BACKSPACE  &lt 5 DEL           &kp PRINTSCREEN
             >;
-
-            sensor-bindings = <&mouse_mov_v>, <&mouse_mov_h>;
         };
 
         NAV {
             bindings = <
-&trans  &trans    &trans    &trans     &trans     &trans                          &trans         &trans          &trans         &trans        &trans         &trans
-&trans  &trans    &trans    &trans     &trans     &trans                          &kp C_AC_REDO  &kp C_AC_PASTE  &kp C_AC_COPY  &kp C_AC_CUT  &kp C_AC_UNDO  &trans
-&trans  &kp LGUI  &kp LALT  &kp LSHFT  &kp LCTRL  &kp CAPSLOCK                    &kp LEFT       &kp DOWN        &kp UP         &kp RIGHT     &trans         &trans
-&trans  &trans    &trans    &trans     &trans     &trans        &trans    &trans  &kp INSERT     &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP   &kp END        &trans
-                            &trans     &trans     &trans        &trans    &trans  &kp BACKSPACE  &trans          &trans
+&trans  &trans    &trans    &trans            &trans          &trans                                                       &trans         &trans          &trans         &trans        &trans         &trans
+&trans  &trans    &trans    &trans            &trans          &trans                                                       &kp C_AC_REDO  &kp C_AC_PASTE  &kp C_AC_COPY  &kp C_AC_CUT  &kp C_AC_UNDO  &trans
+&trans  &kp LGUI  &kp LALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp CAPSLOCK                                                 &kp LEFT       &kp DOWN        &kp UP         &kp RIGHT     &trans         &trans
+&trans  &trans    &trans    &trans            &trans          &trans        &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp INSERT     &kp HOME        &kp PAGE_DOWN  &kp PAGE_UP   &kp END        &trans
+                            &trans            &trans          &trans        &trans                  &trans                 &kp BACKSPACE  &trans          &trans
             >;
 
             label = "navigation";
-            sensor-bindings = <&sensor_transp 0 0>, <&mouse_scroll_h>;
         };
 
         MOUSE {
             bindings = <
-&trans  &trans    &trans    &trans     &trans     &trans                             &trans          &trans          &trans        &trans           &trans      &trans
-&trans  &trans    &trans    &trans     &trans     &trans                             &kp K_REDO      &kp K_PASTE     &kp K_COPY    &kp K_CUT        &kp K_UNDO  &trans
-&trans  &kp LGUI  &kp LALT  &kp LSHFT  &kp LCTRL  &kp CAPSLOCK                       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans      &trans
-&trans  &trans    &trans    &trans     &trans     &trans        &trans    &trans     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp END     &trans
-                            &trans     &trans     &trans        &trans    &mkp LCLK  &mkp RCLK       &mkp MCLK       &trans
+&trans  &trans    &trans    &trans            &trans          &trans                             &trans          &trans          &trans        &trans           &trans      &trans
+&trans  &trans    &trans    &trans            &trans          &trans                             &kp K_REDO      &kp K_PASTE     &kp K_COPY    &kp K_CUT        &kp K_UNDO  &trans
+&trans  &kp LGUI  &kp LALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp CAPSLOCK                       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans      &trans
+&trans  &trans    &trans    &trans            &trans          &trans        &trans    &trans     &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp END     &trans
+                            &trans            &trans          &trans        &trans    &mkp LCLK  &mkp RCLK       &mkp MCLK       &trans
             >;
 
             label = "Mouse";
-            sensor-bindings = <&sensor_transp 0 0>, <&mouse_scroll_v>;
         };
 
         SYM {
             bindings = <
-&kp F1  &kp F2           &kp F3         &kp F4        &kp F5                &kp F6                                      &kp F7  &kp F8     &kp F9     &kp F10   &kp F11   &kp F12
-&trans  &kp RIGHT_BRACE  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                       &trans  &trans     &trans     &trans    &trans    &trans
-&trans  &kp LEFT_BRACE   &kp DOLLAR     &kp PERCENT   &kp CARET             &kp PLUS                                    &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
-&trans  &kp COLON        &kp EXCL       &kp AT        &kp HASH              &kp PIPE               &trans       &trans  &trans  &trans     &trans     &trans    &trans    &trans
-                                        &kp TILDE     &kp LESS_THAN         &kp GREATER_THAN       &kp UNDER    &trans  &trans  &trans     &trans
+&kp F1  &kp F2           &kp F3         &kp F4        &kp F5                &kp F6                                              &kp F7  &kp F8     &kp F9     &kp F10   &kp F11   &kp F12
+&trans  &kp RIGHT_BRACE  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                               &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &kp LEFT_BRACE   &kp DOLLAR     &kp PERCENT   &kp CARET             &kp PLUS                                            &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
+&trans  &kp COLON        &kp EXCL       &kp AT        &kp HASH              &kp PIPE               &kp DOUBLE_QUOTES    &trans  &trans  &trans     &trans     &trans    &trans    &trans
+                                        &kp TILDE     &kp LESS_THAN         &kp GREATER_THAN       &kp UNDER            &trans  &trans  &trans     &trans
             >;
 
             label = "Symbols";
@@ -142,11 +138,11 @@
 
         NUM {
             bindings = <
-&kp F1  &kp F2    &kp F3  &kp F4     &kp F5     &kp F6                          &kp F7  &kp F8     &kp F9     &kp F10   &kp F11   &kp F12
-&trans  &kp RBKT  &kp N7  &kp N8     &kp N9     &kp N0                          &trans  &trans     &trans     &trans    &trans    &trans
-&trans  &kp LBKT  &kp N4  &kp N5     &kp N6     &kp EQUAL                       &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
-&trans  &kp SEMI  &kp N1  &kp N2     &kp N3     &kp FSLH   &trans       &trans  &trans  &trans     &trans     &trans    &trans    &trans
-                          &kp GRAVE  &kp COMMA  &kp DOT    &kp MINUS    &trans  &trans  &trans     &trans
+&kp F1  &kp F2    &kp F3  &kp F4     &kp F5     &kp F6                                     &kp F7  &kp F8     &kp F9     &kp F10   &kp F11   &kp F12
+&trans  &kp RBKT  &kp N7  &kp N8     &kp N9     &kp N0                                     &trans  &trans     &trans     &trans    &trans    &trans
+&trans  &kp LBKT  &kp N4  &kp N5     &kp N6     &kp EQUAL                                  &trans  &kp RSHFT  &kp RCTRL  &kp RALT  &kp RGUI  &trans
+&trans  &kp SEMI  &kp N1  &kp N2     &kp N3     &kp BACKSLASH  &kp SINGLE_QUOTE    &trans  &trans  &trans     &trans     &trans    &trans    &trans
+                          &kp GRAVE  &kp COMMA  &kp DOT        &kp MINUS           &trans  &trans  &trans     &trans
             >;
 
             label = "Numeric";
@@ -172,10 +168,6 @@
 &trans  &trans    &trans    &trans     &trans     &trans  &trans    &kp K_MUTE  &bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_CLR_ALL
                             &trans     &trans     &trans  &trans    &kp C_STOP  &kp K_PREV       &kp K_NEXT       &trans
             >;
-
-            sensor-bindings =
-                <&sensor_transp 0 0>,
-                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
 
             label = "Media";
         };
