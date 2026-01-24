@@ -162,11 +162,11 @@
 
         MEDIA {
             bindings = <
-&trans  &trans    &trans    &trans     &trans     &trans                        &trans           &trans           &trans           &trans           &trans        &trans
-&trans  &trans    &trans    &trans     &trans     &trans                        &rgb_ug RGB_EFF  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI  &trans        &trans
-&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans                        &rgb_ug RGB_TOG  &trans           &trans           &trans           &trans        &trans
-&trans  &trans    &trans    &trans     &trans     &trans  &trans    &kp K_MUTE  &bt BT_CLR       &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_CLR_ALL
-                            &trans     &trans     &trans  &trans    &kp C_STOP  &kp K_PREV       &kp K_NEXT       &trans
+&trans  &trans    &trans    &trans     &trans     &trans                        &trans           &trans              &trans             &trans           &trans        &trans
+&trans  &trans    &trans    &trans     &trans     &trans                        &rgb_ug RGB_EFF  &rgb_ug RGB_HUI     &rgb_ug RGB_SAI    &rgb_ug RGB_SPI  &trans        &trans
+&trans  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans                        &rgb_ug RGB_TOG  &kp K_VOLUME_DOWN2  &kp K_VOLUME_DOWN  &trans           &trans        &trans
+&trans  &trans    &trans    &trans     &trans     &trans  &trans    &kp K_MUTE  &bt BT_CLR       &bt BT_SEL 0        &bt BT_SEL 1       &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_CLR_ALL
+                            &trans     &trans     &trans  &trans    &kp C_STOP  &kp K_PREV       &kp K_NEXT          &trans
             >;
 
             label = "Media";
